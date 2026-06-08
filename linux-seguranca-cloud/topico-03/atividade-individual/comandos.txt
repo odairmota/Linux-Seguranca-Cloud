@@ -1,0 +1,21 @@
+
+=== COMANDOS UTILIZADOS NA ATIVIDADE DO TÓPICO 3 ===
+1. Atualização do sistema e instalação da Stack LAMP:
+   sudo apt update && sudo apt upgrade -y
+   sudo apt install apache2 mariadb-server php libapache2-mod-php php-mysql php-xml php-gd php-mbstring php-imagick php-zip php-intl -y
+2. Inicialização de serviços e configuração do MariaDB:
+   sudo systemctl start apache2 && sudo systemctl enable apache2
+   sudo systemctl start mariadb && sudo systemctl enable mariadb
+   sudo mysql -u root
+   > CREATE DATABASE wordpress_db DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+   > CREATE USER 'wp_user'@'localhost' IDENTIFIED BY 'SenhaSeguraLab2026!';
+   > GRANT ALL PRIVILEGES ON wordpress_db.* TO 'wp_user'@'localhost';
+   > FLUSH PRIVILEGES;
+3. Download e extração do WordPress, permissões e cópia de estrutura:
+   cd /tmp
+   wget https://pt.wordpress.org/latest-pt_PT.tar.gz
+   tar -xvf latest-pt_PT.tar.gz
+   sudo mv wordpress /var/www/html/
+   sudo chown -R www-data:www-data /var/www/html/wordpress
+   sudo chmod -R 755 /var/www/html/wordpress
+   cp /var/www/html/wordpress/wp-config-sample.php ~/linux-seguranca-cloud/topico-03/atividade-individual/wordpress/

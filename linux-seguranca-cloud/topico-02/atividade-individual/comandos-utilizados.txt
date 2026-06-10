@@ -1,0 +1,40 @@
+====================================================================
+ATIVIDADE PRÁTICA INDIVIDUAL ODAIR MOTA- COMANDOS UTILIZADOS
+====================================================================
+
+--- Tarefa A1: Criar a estrutura de trabalho ---
+mkdir -p topico-02-individual/evidencias
+cd topico-02-individual
+touch comandos-utilizados.txt permissoes.md acesso-remoto.md
+
+
+--- Tarefa A2: Identificar utilizador e grupos ---
+whoami
+# Finalidade: Exibe o nome do utilizador atualmente autenticado na sessão do terminal.
+
+id
+# Finalidade: Exibe informações detalhadas de identidade do utilizador, incluindo o UID (User ID),
+ o GID (Group ID) principal e todos os grupos suplementares aos quais o utilizador pertence.
+
+groups
+# Finalidade: Exibe, de forma simplificada e direta, apenas os nomes de todos os grupos 
+aos quais o utilizador atual está associado.
+
+--- Tarefa A3: Criar ficheiros de teste ---
+mkdir teste_permissoes
+cd teste_permissoes
+touch publico.txt restrito.txt script.sh
+echo '#!/bin/bash' > script.sh
+echo 'echo "Execução do script de teste com sucesso!"' >> script.sh
+ls -l
+
+--- Tarefa A4: Aplicar permissões ---
+chmod 644 publico.txt
+chmod 640 restrito.txt
+chmod u+x script.sh
+ls -l
+./script.sh
+
+--- Opção B3: Aprofundamento (Acesso Remoto e Chaves SSH) ---
+ssh-keygen -t ed25519 -C "auditoria@local" -f ~/.ssh/id_ed25519_teste
+ls -l ~/.ssh

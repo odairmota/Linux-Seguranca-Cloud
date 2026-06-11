@@ -1,0 +1,9 @@
+uptime
+free -h
+df -h /
+sudo systemctl status apache2
+sudo tail -n 20 /var/log/apache2/access.log
+sudo tar -cvpzf /backup-projeto-web.tar.gz /opt/projeto-web/
+mkdir -p /tmp/recuperacao_teste/
+sudo tar -xvpzf /backup-projeto-web.tar.gz -C /tmp/recuperacao_teste/
+ls -la /tmp/recuperacao_teste/opt/projeto-web/

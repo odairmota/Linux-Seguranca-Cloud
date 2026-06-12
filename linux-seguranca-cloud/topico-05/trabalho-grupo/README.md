@@ -11,4 +11,4 @@ Este diretório aloja o plano de resiliência e continuidade operacional concebi
 
 ### 2. Conteúdo da Pasta
 * 📄 **[Relatório de Continuidade em PDF](grupo-odair-monitorizacao-continuidade-topico-05.pdf):** Documento formal estruturado contendo a matriz de monitorização, política de retenção de backups e planos de ação para desastres em ambiente de laboratório Linux Ubuntu.
-* 📁 **[Evidências/](evidencias/):** Pasta dedicada aos registos e outputs visuais de validação das tarefas de backup executadas.
+* 📁 **[Evidências/](evidencias/):** Pasta dedicada aos registos e outputs visuais de validação de monitorização e continuição de negocio.
